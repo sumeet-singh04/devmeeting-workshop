@@ -1,0 +1,15 @@
+extends ../../template/slide
+
+block title
+    | Simple validation
+
+block layout
+    - var index = '02';
+    .xp-column: xp-editor
+        +includeFile(index, 'app.component.ts', true)
+        +includeFile(index, 'app.ts')
+        +includeFile('', 'todo.component.ts')
+        +includeFile('', 'index.html')
+        +includeFile('', 'config.js')
+    .xp-column
+        +previewFakeTs

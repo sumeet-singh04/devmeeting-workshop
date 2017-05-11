@@ -1,0 +1,18 @@
+extends ../../template/slide
+
+block title
+    | Very simple form
+
+block layout
+    - var index = '01';
+    .xp-column
+        .xp-row: xp-editor
+            +includeFile(index, 'app.component.ts', true)
+            +includeFile('', 'todo.component.ts')
+            +includeFile('', 'index.html')
+            +includeFile('', 'config.js')
+        .xp-row: xp-editor
+            +includeFile(index, 'app.ts', true)
+    .xp-column
+        .xp-row
+            +previewFakeTs

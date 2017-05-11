@@ -1,0 +1,20 @@
+extends ../../template/slide
+
+block title
+    | Simple Http fetch
+
+block layout
+    - var index = '01';
+    .xp-column
+        .xp-row: xp-editor
+            +includeFile(index, 'app.component.ts', true)
+            +includeFile('', 'todo.component.ts')
+            +includeFile('', 'index.html')
+            +includeFile('', 'config.js')
+        .xp-row: xp-editor
+            +includeFile('', 'todos.json')
+    .xp-column
+        .xp-row
+            +previewFakeTs
+        .xp-row: xp-editor
+            +includeFile(index, 'app.ts', true)

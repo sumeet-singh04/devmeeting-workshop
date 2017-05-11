@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Tasks</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" media="all" href="https://xpla.org/static/css/deck.3.0.0.css">
+    <style>
+      body {
+          padding-bottom: 2em;
+      }
+      
+      .product-tile {
+        width: 300px;
+        min-height: 100px;
+        margin-top: 2rem;
+        border: 1px solid #e2e2e2;
+        padding: 1rem;
+        box-shadow: 1px 1px 2px black;
+      }
+      
+      .product-heading {
+        font-weight: 800;
+        font-size: 2rem;
+      }
+      .product-detail {
+        margin-top: 1rem;
+      }
+      
+      .product-detail > ul {
+        list-style: none;
+        font-size: 1.5rem;
+        padding-left: 0px;
+      }
+      
+      .product-detail > ul li {
+        padding-top: 0.5rem;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <h1><a href="index.html">Tasks</a></h1>
+      <section>
+        <header>
+          <h2>Vanilla JS</h2>
+        </header>
+        <ol>
+          <li>Using Vanilla JS and raw DOM operations display single product tile
+          </li>
+          <li>Display list of products using code from previous task
+          </li>
+          <li>Above list of products display list of several promoted products
+          </li>
+          <li>Refactor your code: simplify it and reduce repetitions
+          </li>
+        </ol>
+      </section>
+      <section>
+        <div>
+          Example Product tile:
+        </div>
+        
+        
+        <div class="product-tile">
+          <div class="product-heading">
+            Product Heading
+          </div>
+          <div class="product-detail">
+            <ul>
+              <li>Description: Hello. This is product. Launched on 14th.</li>
+              <li>Price: $120</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

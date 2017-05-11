@@ -1,0 +1,17 @@
+extends ../../template/slide
+
+block title
+    | Custom events
+
+block layout
+    - var index = '02';
+    .xp-column
+        .xp-row: xp-editor
+            +includeFile(index, 'app.component.ts', true)
+            +includeFile(index, 'app.ts')
+            +includeFile('', 'index.html')
+            +includeFile('', 'config.js')
+        .xp-row: xp-editor
+            +includeFile(index, 'timer.component.ts', true)
+    .xp-column
+        +previewFakeTs

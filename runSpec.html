@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Tests</title>
+    <link rel="stylesheet" href="node_modules/jasmine-core/lib/jasmine-core/jasmine.css">
+    <script src="node_modules/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+    <script src="node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+    <script src="node_modules/jasmine-core/lib/jasmine-core/boot.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script src="config.js"></script>
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+</head>
+<body>
+<script>
+    window.addEventListener('load', function () {
+        System.import('built/spec/spec')
+            .then(function () {
+                ['.jasmine-run-options', '.jasmine-bar'].forEach(function (selector) {
+                    var element = document.querySelector(selector);
+                    element.parentNode.removeChild(element);
+                });
+            })
+            .then(function () {
+                jasmine.getEnv().execute();
+            });
+    });
+</script>
+</body>
+</html>

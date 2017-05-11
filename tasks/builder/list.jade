@@ -1,0 +1,10 @@
+extends index
+
+block tasks
+    +taskSection(name)
+        ol
+            each task in tasks
+                li
+                    if task.isAdditional
+                        span.label.label-warning Additional
+                    | !{task.text}

@@ -1,0 +1,22 @@
+extends ../../template/slide
+
+block title
+    | DI with interface typings
+
+block layout
+    - var index = '02';
+        .xp-row.with-comments
+            .xp-column
+                .xp-row: xp-editor
+                    +includeFile(index, 'TodoRepository.ts', true)
+                .xp-row: xp-editor
+                    +includeFile(index, 'app.component.ts', true)
+                    +includeFile('', 'todo.component.ts')
+                    +includeFile('', 'index.html')
+                    +includeFile('', 'config.js')
+            .xp-column
+                .xp-row
+                    +previewFakeTs
+                .xp-row: xp-editor
+                    +includeFile(index, 'app.ts', true)
+        .xp-row.comments There are no dependencies, so @Injectable is optional

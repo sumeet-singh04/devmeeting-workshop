@@ -1,0 +1,14 @@
+extends ../../template/slide
+
+block title
+    | Events as observable
+
+block layout
+    - var index = '03';
+    .xp-column: xp-editor
+        +includeFile(index, 'app.component.ts', true)
+        +includeFile(index, 'app.ts', true)
+        +includeFile('', 'index.html')
+        +includeFile('', 'config.js')
+    .xp-column
+        +previewFakeTs

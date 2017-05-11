@@ -1,0 +1,20 @@
+extends ../../template/slide
+
+block title
+    | Passing data to component
+
+block layout
+    - var index = '01';
+    .xp-column
+        .xp-row: xp-editor
+            +includeFile(index, 'app.ts', true)
+        .xp-row: xp-editor
+            +includeFile(index, 'app.component.ts', true)
+
+    .xp-column
+        .xp-row
+            +previewFakeTs
+        .xp-row: xp-editor
+            +includeFile(index, 'todo.component.ts', true)
+            +includeFile('', 'index.html')
+            +includeFile('', 'config.js')

@@ -1,0 +1,15 @@
+{
+    "name": "teasers",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "node ./bin/build.js",
+        "watch": "watch --interval 5 npm run build"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "pug": "^2.0.0-beta11"
+    }
+}
